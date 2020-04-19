@@ -1,12 +1,8 @@
 #include "ODU335.h"
 
-ODU335::ODU335(ODU_TYPE oduType):ODU(oduType)
+ODU335::ODU335(ODU_TYPE oduType) :ODU(oduType)
 {
 	cout << name() << __FUNCTION__ << endl;
-	//txFreq = 33500;子类对象调用父类,可利用父类数据,无需自己再创建数据.直接将自己数据存至父类即可.子类的数据存在子类对象中
-	//rxFreq = 33500;
-	//txPower = 20;
-	//rxLevel = 0;
 }
 
 bool ODU335::heartBeat()
@@ -20,9 +16,6 @@ bool ODU335::heartBeat()
 	if (ODU_TYPE_335_FLAG == response) {
 		type = ODU_TYPE::ODU_TYPE_335;
 		return true;
-	}
-	else {
-		return false;
 	}
 
 	return false;

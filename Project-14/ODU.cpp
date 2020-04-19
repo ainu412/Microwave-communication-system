@@ -1,13 +1,14 @@
 #include "ODU.h"
 
+
 ODU::ODU(ODU_TYPE oduType)
 {
-		cout << name() << __FUNCTION__ << endl;
-		txFreq = 34400;
-		rxFreq = 31100;
-		txPower = 20;
-		rxLevel = 0;
-		type = oduType;
+	cout << name() << __FUNCTION__ << endl;
+	txFreq = 34400;
+	rxFreq = 31100;
+	txPower = 20;
+	rxLevel = 0;
+	type = oduType;
 }
 
 int ODU::getTxFreq()
@@ -69,9 +70,7 @@ bool ODU::heartBeat()
 	//	type = ODU_TYPE::ODU_TYPE_335;
 	//	return false;
 	//}
-	else {
-		return false;
-	}
+	return false;
 }
 
 string ODU::name()

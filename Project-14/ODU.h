@@ -23,31 +23,29 @@ enum class ODU_TYPE {
 	ODU_TYPE_335,
 	ODU_TYPE_FUTURE
 };
-#define ODU_TYPE_331_FLAG  "331"
-#define ODU_TYPE_335_FLAG  "335"
+#define ODU_TYPE_331_FLAG "331"
+#define ODU_TYPE_335_FLAG "335"
 
 class ODU
 {
 public:
 	ODU(ODU_TYPE oduType = ODU_TYPE::ODU_TYPE_331);
-	int getTxFreq();
+	int getTxFreq();// 发射频率
 	void setTxFreq(int);
-	int getRxFreq();
+	int getRxFreq();// 接收频率
 	void setRxFreq(int);
-	int getTxPower();
+	int getTxPower();// 发射功率
 	void setTxPower(int);
-	int getRxLevel();
+	int getRxLevel();// 接收电平
 
-	virtual bool heartBeat();
+	virtual bool heartBeat();// 心跳包
 	virtual string name();
 
 	ODU_TYPE type;
 
-private://设为protected??--唯一差别是子类访问权限,子类(ODU335)不需要访问(ODU331)
+private://为何不设为protected--唯一差别是子类访问权限,子类(ODU335)不需要访问(ODU331)
 	int txFreq;
 	int rxFreq;
 	int txPower;
 	int rxLevel;
-
 };
-

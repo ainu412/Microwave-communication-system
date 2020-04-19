@@ -1,6 +1,5 @@
 #include "ODU.h"
 
-
 ODU::ODU(ODU_TYPE oduType)
 {
 		cout << name() << __FUNCTION__ << endl;

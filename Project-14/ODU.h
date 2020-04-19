@@ -23,8 +23,8 @@ enum class ODU_TYPE {
 	ODU_TYPE_335,
 	ODU_TYPE_FUTURE
 };
-#define ODU_TYPE_331_FLAG "331"
-#define ODU_TYPE_335_FLAG "335"
+#define ODU_TYPE_331_FLAG  "331"
+#define ODU_TYPE_335_FLAG  "335"
 
 class ODU
 {
